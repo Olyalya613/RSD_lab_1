@@ -85,5 +85,10 @@ DELETE /api/locations/{id}                 # Delete location
 
 
 
+# Testing
 
+```cmd
+
+   hurl --test .\tests\ --variables-file .\tests\variables.properties
+```
 
