@@ -103,3 +103,35 @@ HTTP 204
 GET {{host}}/api/travel-plans/{{race_plan_id}}
 
 HTTP 404
+# Independent location optimistic version test
+POST {{host}}/api/travel-plans
+Content-Type: application/json
+{"title":"Location version check"}
+HTTP 201
+[Captures]
+version_plan_id: jsonpath "$.id"
+
+POST {{host}}/api/travel-plans/{{version_plan_id}}/locations
+Content-Type: application/json
+{"name":"Museum"}
+HTTP 201
+[Captures]
+version_location_id: jsonpath "$.id"
+old_location_version: jsonpath "$.version"
+
+PUT {{host}}/api/locations/{{version_location_id}}
+Content-Type: application/json
+{"notes":"Tickets reserved","version":{{old_location_version}}}
+HTTP 200
+[Asserts]
+jsonpath "$.version" == 2
+
+PUT {{host}}/api/locations/{{version_location_id}}
+Content-Type: application/json
+{"budget":30,"version":{{old_location_version}}}
+HTTP 409
+[Asserts]
+jsonpath "$.current_version" == 2
+
+DELETE {{host}}/api/travel-plans/{{version_plan_id}}
+HTTP 204
