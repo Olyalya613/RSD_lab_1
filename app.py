@@ -172,10 +172,10 @@ async def create_location(id: str, request: Request):
 @app.put('/api/locations/{id}')
 async def put_location(id: str, request: Request):
     lid=ident(id); d=await payload(request); validate(d,'location')
-    if 'version' not in d: fail('version required')
     with pool.connection() as conn:
         with conn.cursor() as cur:
             existing=row_or_404(cur.execute('SELECT * FROM locations WHERE id=%s',(lid,)).fetchone())
+            if 'version' not in d: fail('version required')
             row_or_404(cur.execute('SELECT id FROM travel_plans WHERE id=%s FOR UPDATE',(existing['travel_plan_id'],)).fetchone())
             existing=row_or_404(cur.execute('SELECT * FROM locations WHERE id=%s FOR UPDATE',(lid,)).fetchone())
             if existing['version'] != d['version']:
