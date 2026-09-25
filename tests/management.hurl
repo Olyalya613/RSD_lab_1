@@ -27,6 +27,7 @@ Content-Type: application/json
 HTTP 201
 [Captures]
 location1_id: jsonpath "$.id"
+location1_version: jsonpath "$.version"
 
 [Asserts]
 jsonpath "$.name" == "Eiffel Tower"
@@ -83,6 +84,7 @@ PUT {{host}}/api/locations/{{location1_id}}
 Content-Type: application/json
 {
   "name": "Eiffel Tower (Night Visit)",
+  "version": {{location1_version}},
   "budget": 30.00,
   "notes": "Amazing night illumination"
 }

@@ -1,0 +1,24 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: traveler
+      POSTGRES_USER: traveler
+      POSTGRES_PASSWORD: traveler
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U traveler"]
+      interval: 2s
+      retries: 20
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql://traveler:traveler@db:5432/traveler
+    ports:
+      - "4567:4567"
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  pgdata:

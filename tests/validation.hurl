@@ -299,6 +299,7 @@ Content-Type: application/json
 HTTP 201
 [Captures]
 valid_location_id: jsonpath "$.id"
+valid_location_version: jsonpath "$.version"
 
 [Asserts]
 jsonpath "$.name" == "Valid Test Location"
@@ -314,6 +315,7 @@ PUT {{host}}/api/locations/{{valid_location_id}}
 Content-Type: application/json
 {
   "name": "Updated Location",
+  "version": {{valid_location_version}},
   "latitude": -91.0
 }
 
@@ -325,6 +327,7 @@ jsonpath "$.error" contains "Validation error"
 PUT {{host}}/api/locations/{{valid_location_id}}
 Content-Type: application/json
 {
+  "version": {{valid_location_version}},
   "arrival_date": "2025-06-02T18:00:00Z",
   "departure_date": "2025-06-02T08:00:00Z"
 }
