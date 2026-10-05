@@ -9,6 +9,7 @@ from docx.shared import Cm, Pt, RGBColor
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
+from docx.opc.constants import RELATIONSHIP_TYPE as RT
 
 ROOT=Path(__file__).resolve().parents[1]
 PERF=ROOT/'tests/performance-tests'
@@ -132,11 +133,19 @@ def main():
     h('Структура проєкту та коміти')
     p('app.py і docs/schema.sql — TravelerAPI та PostgreSQL. native — ініціалізація БД, запуск API, запис середовища, аналіз і генератор звіту. tests/performance-tests/config — адреси та профілі; utils — клієнт API, генератор даних, користувацький сценарій; *-test.js — п’ять основних тестів; results — фактичні метрики, журнали й скриншоти. Зайву вкладеність репозиторію усунено: ці файли розміщені безпосередньо в корені. Dockerfile і compose.yaml не входять до цього комплекту.')
     try:
-        log=subprocess.check_output(['git','log','--format=%h|%s'],cwd=ROOT,text=True)
+        log=subprocess.check_output(['git','log','--format=%H|%s'],cwd=ROOT,text=True)
         patterns=['Fix TravelerAPI CAS', 'add k6 performance testing baseline','Add Load testing','Add Stress testing','Add Spike testing','Add Endurance testing']
         commits=[line.split('|',1) for line in log.splitlines() if any(p in line for p in patterns)]
     except (OSError,subprocess.SubprocessError):commits=[]
-    table(doc,['Коміт','Зміна'],commits or [('Перевірити git log','Історія міститься в .git або history.bundle')])
+    commit_table=table(doc,['Коміт','Зміна'],[(item[0][:7],item[1]) for item in commits] or [('Перевірити git log','Історія міститься в .git або history.bundle')])
+    for index,(sha,message) in enumerate(commits,1):
+        paragraph=commit_table.rows[index].cells[0].paragraphs[0];paragraph.clear()
+        link=OxmlElement('w:hyperlink')
+        relation=paragraph.part.relate_to('https://github.com/Olyalya613/RSD_lab_1/commit/'+sha,RT.HYPERLINK,is_external=True)
+        link.set(qn('r:id'),relation)
+        run=OxmlElement('w:r');props=OxmlElement('w:rPr');color=OxmlElement('w:color');color.set(qn('w:val'),'0563C1');props.append(color);run.append(props)
+        text=OxmlElement('w:t');text.text=sha[:7];run.append(text);link.append(run);paragraph._p.append(link)
+    p('Хеші в таблиці є посиланнями на очікувані адреси GitHub. Вони запрацюють лише після публікації цієї локальної історії; на момент підготовки віддалені коміти не створені.')
     p('Робота підготовлена в локальній гілці lab2-corrected. Віддалена публікація не виконувалася. Після git push -u origin lab2-corrected репозиторій буде доступний за адресою https://github.com/Olyalya613/RSD_lab_1/tree/lab2-corrected. Адреси комітів формуються як https://github.com/Olyalya613/RSD_lab_1/commit/ІДЕНТИФІКАТОР і перевіряються після публікації.')
     h('Виправлення конкурентного доступу')
     p('Обробники, що використовують синхронний psycopg, оголошені def. FastAPI виконує їх у thread pool, тому один Uvicorn worker обслуговує одночасні запити. Асинхронна залежність payload лише читає JSON і не працює з БД.')
