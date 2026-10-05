@@ -1,0 +1,23 @@
+{
+  "started_at": "2026-10-05T15:26:56.7003803+03:00",
+  "api_url": "http://localhost:4567",
+  "execution": "native Windows processes, confirm PostgreSQL/API are not containers",
+  "os": "Майкрософт Windows 10 Pro",
+  "cpu": "Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz",
+  "logical_processors": 8,
+  "ram_gb": 15.86,
+  "k6_version": "k6.exe v2.2.0 (commit/00a9a1b7f5, go1.26.5, windows/amd64)",
+  "workers": 1,
+  "db_pool_max": 20,
+  "git_head": "97a1f57894c9d2bb8e6a75e2e0be2abd941d6a21",
+  "postgresql_version": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35226, 64-bit",
+  "isolation": "read committed",
+  "postgres_max_connections": "100",
+  "python_version": "3.12.10",
+  "dependencies": {
+    "fastapi": "0.142.2",
+    "uvicorn": "0.54.0",
+    "psycopg": "3.3.6",
+    "psycopg-pool": "3.3.3"
+  }
+}
