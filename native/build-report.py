@@ -21,7 +21,11 @@ def number(value,unit='',percent=False):
     return f'{value*100 if percent else value:.2f}{unit}'
 
 def table(doc,headers,rows):
-    t=doc.add_table(rows=1,cols=len(headers));t.style='Table Grid'
+    t=doc.add_table(rows=1,cols=len(headers));t.style='Table Grid';t.autofit=False
+    widths=[3,4,4,6] if len(headers)==4 else [3,14] if headers[0]=='Коміт' else [3.3,13.7] if headers[0]=='Сценарій' else [5.5,11.5] if headers[0]=='Параметр' else [11,6]
+    for column,width in zip(t.columns,widths):column.width=Cm(width)
+    for row in t.rows:
+        for cell,width in zip(row.cells,widths):cell.width=Cm(width)
     for c,label in zip(t.rows[0].cells,headers):c.text=str(label)
     for row in rows:
         cells=t.add_row().cells
@@ -45,6 +49,7 @@ def table(doc,headers,rows):
             for p in cell.paragraphs:
                 p.paragraph_format.space_after=Pt(4)
                 for run in p.runs:run.font.size=Pt(9)
+    gap=doc.add_paragraph();gap.paragraph_format.space_after=Pt(4);gap.paragraph_format.line_spacing=Pt(1);gap.add_run(' ').font.size=Pt(1)
     return t
 
 def main():
@@ -53,7 +58,7 @@ def main():
     results={r['test']:r for r in json.loads((args.results/'analysis.json').read_text(encoding='utf-8'))}
     meta_file=args.results/'run-meta.json';meta=json.loads(meta_file.read_text(encoding='utf-8-sig')) if meta_file.exists() else {}
     doc=Document();sec=doc.sections[0];sec.page_width=Cm(21);sec.page_height=Cm(29.7);sec.top_margin=Cm(1.8);sec.bottom_margin=Cm(1.8);sec.left_margin=Cm(2);sec.right_margin=Cm(2)
-    style=doc.styles['Normal'];style.font.name='Arial';style.font.size=Pt(10.5);style.paragraph_format.space_after=Pt(7)
+    style=doc.styles['Normal'];style.font.name='Arial';style.font.size=Pt(10.5);style.paragraph_format.space_after=Pt(7);style.paragraph_format.keep_together=True
     for name,size in [('Title',18),('Heading 1',13),('Heading 2',11)]:
         st=doc.styles[name];st.font.name='Arial';st.font.size=Pt(size);st.font.color.rgb=RGBColor(0,0,0)
         for border in list(st._element.get_or_add_pPr().findall(qn('w:pBdr'))):st._element.get_or_add_pPr().remove(border)
