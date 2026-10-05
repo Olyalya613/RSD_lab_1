@@ -1,0 +1,25 @@
+test_configured_vus_are_not_claimed_as_achieved (test_analysis.AnalysisTests.test_configured_vus_are_not_claimed_as_achieved) ... ok
+test_largest_level_requires_good_latency_and_error_rate (test_analysis.AnalysisTests.test_largest_level_requires_good_latency_and_error_rate) ... ok
+test_percentile_linear_interpolation (test_analysis.AnalysisTests.test_percentile_linear_interpolation) ... ok
+test_verification_mode_never_becomes_baseline (test_analysis.AnalysisTests.test_verification_mode_never_becomes_baseline) ... ok
+test_bad_reorder_rolls_back_both_versions (test_concurrency.ConcurrencyTests.test_bad_reorder_rolls_back_both_versions) ... ok
+test_blocked_location_does_not_block_other_requests (test_concurrency.ConcurrencyTests.test_blocked_location_does_not_block_other_requests) ... ok
+test_delete_compacts_order_and_changes_versions (test_concurrency.ConcurrencyTests.test_delete_compacts_order_and_changes_versions) ... ok
+test_disjoint_reorders_share_collection_token (test_concurrency.ConcurrencyTests.test_disjoint_reorders_share_collection_token) ... ok
+test_location_cas_has_one_winner (test_concurrency.ConcurrencyTests.test_location_cas_has_one_winner) ... ok
+test_notes_does_not_lock_parent (test_concurrency.ConcurrencyTests.test_notes_does_not_lock_parent) ... ok
+test_plan_cas_has_one_winner (test_concurrency.ConcurrencyTests.test_plan_cas_has_one_winner) ... ok
+test_reorder_requires_collection_version (test_concurrency.ConcurrencyTests.test_reorder_requires_collection_version) ... ok
+test_single_snapshot_while_writer_commits (test_concurrency.ConcurrencyTests.test_single_snapshot_while_writer_commits) ... ok
+test_stale_collection_after_append_is_rejected (test_concurrency.ConcurrencyTests.test_stale_collection_after_append_is_rejected) ... ok
+test_stale_location_rolls_back_collection_cas (test_concurrency.ConcurrencyTests.test_stale_location_rolls_back_collection_cas) ... ok
+test_budget_precision_is_rejected (test_native_validation.ValidationTests.test_budget_precision_is_rejected) ... ok
+test_existing_location_requires_version (test_native_validation.ValidationTests.test_existing_location_requires_version) ... ok
+test_invalid_currency_is_rejected (test_native_validation.ValidationTests.test_invalid_currency_is_rejected) ... ok
+test_nonexistent_location_is_404_even_without_version (test_native_validation.ValidationTests.test_nonexistent_location_is_404_even_without_version) ... ok
+test_unknown_field_is_rejected (test_native_validation.ValidationTests.test_unknown_field_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.416s
+
+OK

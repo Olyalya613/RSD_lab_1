@@ -1,0 +1,40 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: smoke-test.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 2 max VUs, 15s max duration (incl. graceful stop):
+              * users: Up to 2 looping VUs for 5s over 3 stages (gracefulRampDown: 10s, gracefulStop: 10s)
+
+
+running (01.0s), 0/2 VUs, 0 complete and 0 interrupted iterations
+users   [  20% ] 0/2 VUs  1.0s/5.0s
+
+running (02.0s), 1/2 VUs, 1 complete and 0 interrupted iterations
+users   [  40% ] 1/2 VUs  2.0s/5.0s
+
+running (03.0s), 2/2 VUs, 4 complete and 0 interrupted iterations
+users   [  60% ] 2/2 VUs  3.0s/5.0s
+
+running (04.0s), 2/2 VUs, 8 complete and 0 interrupted iterations
+users   [  80% ] 2/2 VUs  4.0s/5.0s
+
+running (05.0s), 1/2 VUs, 12 complete and 0 interrupted iterations
+users   [ 100% ] 1/2 VUs  5.0s/5.0s
+TEST: smoke (VERIFICATION ONLY, NOT BASELINE)
+avg response: 1.65 ms
+http_req_duration p95: 2.61 ms
+http_req_failed rate: 0.000%
+checks passed: 100.00%
+requests: 222; requests/s: 42.18
+expected optimistic conflicts: 39
+BASE_URL: http://localhost:4567
+
+running (05.3s), 0/2 VUs, 13 complete and 0 interrupted iterations
+users ✓ [ 100% ] 0/2 VUs  5s

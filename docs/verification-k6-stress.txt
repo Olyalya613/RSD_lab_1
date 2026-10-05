@@ -1,0 +1,100 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: stress-test.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 35s max duration (incl. graceful stop):
+              * users: Up to 5 looping VUs for 25s over 13 stages (gracefulRampDown: 10s, gracefulStop: 10s)
+
+
+running (01.0s), 2/5 VUs, 1 complete and 0 interrupted iterations
+users   [   4% ] 2/5 VUs  00.9s/25.0s
+
+running (02.0s), 4/5 VUs, 6 complete and 0 interrupted iterations
+users   [   8% ] 4/5 VUs  01.9s/25.0s
+
+running (03.0s), 5/5 VUs, 15 complete and 0 interrupted iterations
+users   [  12% ] 5/5 VUs  02.9s/25.0s
+
+running (04.0s), 5/5 VUs, 24 complete and 0 interrupted iterations
+users   [  16% ] 5/5 VUs  03.9s/25.0s
+
+running (05.0s), 5/5 VUs, 34 complete and 0 interrupted iterations
+users   [  20% ] 5/5 VUs  04.9s/25.0s
+
+running (06.0s), 5/5 VUs, 44 complete and 0 interrupted iterations
+users   [  24% ] 5/5 VUs  05.9s/25.0s
+
+running (07.0s), 5/5 VUs, 54 complete and 0 interrupted iterations
+users   [  28% ] 5/5 VUs  06.9s/25.0s
+
+running (08.0s), 5/5 VUs, 64 complete and 0 interrupted iterations
+users   [  32% ] 5/5 VUs  07.9s/25.0s
+
+running (09.0s), 5/5 VUs, 74 complete and 0 interrupted iterations
+users   [  36% ] 5/5 VUs  09.0s/25.0s
+
+running (10.0s), 5/5 VUs, 84 complete and 0 interrupted iterations
+users   [  40% ] 5/5 VUs  09.9s/25.0s
+
+running (11.0s), 5/5 VUs, 94 complete and 0 interrupted iterations
+users   [  44% ] 5/5 VUs  10.9s/25.0s
+
+running (12.0s), 5/5 VUs, 103 complete and 0 interrupted iterations
+users   [  48% ] 5/5 VUs  11.9s/25.0s
+
+running (13.0s), 5/5 VUs, 113 complete and 0 interrupted iterations
+users   [  52% ] 5/5 VUs  12.9s/25.0s
+
+running (14.0s), 5/5 VUs, 123 complete and 0 interrupted iterations
+users   [  56% ] 5/5 VUs  13.9s/25.0s
+
+running (15.0s), 5/5 VUs, 133 complete and 0 interrupted iterations
+users   [  60% ] 5/5 VUs  14.9s/25.0s
+
+running (16.0s), 5/5 VUs, 143 complete and 0 interrupted iterations
+users   [  64% ] 5/5 VUs  15.9s/25.0s
+
+running (17.0s), 5/5 VUs, 153 complete and 0 interrupted iterations
+users   [  68% ] 5/5 VUs  16.9s/25.0s
+
+running (18.0s), 5/5 VUs, 163 complete and 0 interrupted iterations
+users   [  72% ] 5/5 VUs  17.9s/25.0s
+
+running (19.0s), 5/5 VUs, 173 complete and 0 interrupted iterations
+users   [  76% ] 5/5 VUs  18.9s/25.0s
+
+running (20.0s), 5/5 VUs, 183 complete and 0 interrupted iterations
+users   [  80% ] 5/5 VUs  19.9s/25.0s
+
+running (21.0s), 5/5 VUs, 193 complete and 0 interrupted iterations
+users   [  84% ] 5/5 VUs  20.9s/25.0s
+
+running (22.0s), 5/5 VUs, 202 complete and 0 interrupted iterations
+users   [  88% ] 5/5 VUs  21.9s/25.0s
+
+running (23.0s), 5/5 VUs, 212 complete and 0 interrupted iterations
+users   [  92% ] 5/5 VUs  22.9s/25.0s
+
+running (24.0s), 5/5 VUs, 222 complete and 0 interrupted iterations
+users   [  96% ] 5/5 VUs  23.9s/25.0s
+
+running (25.0s), 3/5 VUs, 231 complete and 0 interrupted iterations
+users   [ 100% ] 3/5 VUs  25.0s/25.0s
+TEST: stress (VERIFICATION ONLY, NOT BASELINE)
+avg response: 1.51 ms
+http_req_duration p95: 2.31 ms
+http_req_failed rate: 0.000%
+checks passed: 100.00%
+requests: 730; requests/s: 28.85
+expected optimistic conflicts: 0
+BASE_URL: http://localhost:4567
+
+running (25.3s), 0/5 VUs, 234 complete and 0 interrupted iterations
+users ✓ [ 100% ] 0/5 VUs  25s

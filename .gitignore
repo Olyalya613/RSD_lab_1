@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+/*.docx
+/history.bundle
+tests/performance-tests/results/*
+!tests/performance-tests/results/.keep

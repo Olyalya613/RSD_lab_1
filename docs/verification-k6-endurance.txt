@@ -1,0 +1,40 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: endurance-test.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 15s max duration (incl. graceful stop):
+              * users: Up to 5 looping VUs for 5s over 3 stages (gracefulRampDown: 10s, gracefulStop: 10s)
+
+
+running (01.0s), 2/5 VUs, 1 complete and 0 interrupted iterations
+users   [  19% ] 2/5 VUs  0.9s/5.0s
+
+running (02.0s), 4/5 VUs, 6 complete and 0 interrupted iterations
+users   [  39% ] 4/5 VUs  1.9s/5.0s
+
+running (03.0s), 5/5 VUs, 15 complete and 0 interrupted iterations
+users   [  59% ] 5/5 VUs  2.9s/5.0s
+
+running (04.0s), 5/5 VUs, 24 complete and 0 interrupted iterations
+users   [  79% ] 5/5 VUs  3.9s/5.0s
+
+running (05.0s), 1/5 VUs, 34 complete and 0 interrupted iterations
+users   [  99% ] 1/5 VUs  4.9s/5.0s
+TEST: endurance (VERIFICATION ONLY, NOT BASELINE)
+avg response: 1.87 ms
+http_req_duration p95: 3.67 ms
+http_req_failed rate: 0.000%
+checks passed: 100.00%
+requests: 136; requests/s: 24.51
+expected optimistic conflicts: 0
+BASE_URL: http://localhost:4567
+
+running (05.5s), 0/5 VUs, 36 complete and 0 interrupted iterations
+users ✓ [ 100% ] 0/5 VUs  5s
