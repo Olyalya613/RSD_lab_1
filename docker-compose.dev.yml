@@ -1,0 +1,8 @@
+# Development only: bind-mounted source and reload are not for measurements.
+services:
+  web:
+    command: ["python", "-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "4567", "--reload"]
+    volumes:
+      - ./app.py:/app/app.py:ro
+      - ./docs/schema.sql:/app/docs/schema.sql:ro
+      - ./docs/travel_api_swagger.json:/app/docs/travel_api_swagger.json:ro

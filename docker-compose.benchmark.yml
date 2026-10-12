@@ -1,0 +1,9 @@
+# Remove per-container CPU/RAM caps when comparing with uncapped native Lab 2.
+# Docker Desktop's VM-wide allocation still applies and must be recorded.
+services:
+  postgres:
+    cpus: 0
+    mem_limit: 0
+  web:
+    cpus: 0
+    mem_limit: 0

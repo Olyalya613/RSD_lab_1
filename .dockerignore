@@ -1,0 +1,17 @@
+.git
+.env
+.env.*
+!.env.example
+.venv
+__pycache__
+**/__pycache__
+*.pyc
+results
+**/results
+*.docx
+*.zip
+history.bundle
+native
+container
+tests
+docs/verification-*
