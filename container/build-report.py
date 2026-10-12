@@ -91,7 +91,7 @@ def main():
     p('Вихідний репозиторій: https://github.com/Olyalya613/RSD_lab_1. Baseline отримано з опублікованої гілки lab2-corrected, коміт 4fa48edf2e5dfdcf78325acde264215e86164117. Нові зміни підготовлено в локальній гілці lab3-docker; їхня віддалена публікація ще не виконана.')
     try:
         lines=subprocess.check_output(['git','log','--format=%H|%s','origin/lab2-corrected..HEAD'],cwd=ROOT,text=True).splitlines()
-        commits=[line.split('|',1) for line in lines]
+        commits=[line.split('|',1) for line in lines if any(title in line for title in ['Add non-root Dockerfile','Add container Hurl','Preserve actual Lab 2 baseline','Add Docker measurements'])]
     except (OSError,subprocess.SubprocessError):commits=[]
     t=table(doc,['Коміт','Зміна'],[(sha[:7],message) for sha,message in commits] or [('Очікується','Локальна історія буде збережена у .git та history.bundle')],[2.8,14.2])
     for i,(sha,message) in enumerate(commits,1):
@@ -127,7 +127,7 @@ def main():
             import matplotlib
             matplotlib.use('Agg')
             import matplotlib.pyplot as plt
-            fig,axes=plt.subplots(2,1,figsize=(7,4),sharex=True)
+            fig,axes=plt.subplots(2,1,figsize=(7,3.5),sharex=True)
             for label,data in [('Native Lab 2',before),('Docker Lab 3',after)]:
                 timeline=data.get('timeline',[])
                 if not timeline:continue
@@ -148,6 +148,7 @@ def main():
             caption=p('Скриншот k6 у контейнерному експерименті '+name);caption.paragraph_format.keep_with_next=True;doc.add_picture(str(image),width=Cm(16));inserted=True
     if not any((ROOT/'results/monitoring'/f'{name}.png').exists() for name in ['compose-ps','web-logs','docker-stats','hurl']):p('Обов’язкові скриншоти Docker-моніторингу та Hurl ще не надані. Після збереження PNG у results/monitoring і повторного build-report.py вони автоматично увійдуть у документ.')
     h('Джерела')
-    for source in ['Методичні вказівки SumDU.CS.DDS.Lab3.pdf','https://github.com/Olyalya613/RSD_lab_1/tree/lab2-corrected','https://docs.docker.com/build/building/multi-stage/','https://docs.docker.com/compose/how-tos/startup-order/','https://hub.docker.com/_/postgres','https://docs.docker.com/desktop/features/vmm/']:p(source)
+    for source in ['Методичні вказівки SumDU.CS.DDS.Lab3.pdf','https://github.com/Olyalya613/RSD_lab_1/tree/lab2-corrected','https://docs.docker.com/build/building/multi-stage/','https://docs.docker.com/compose/how-tos/startup-order/','https://hub.docker.com/_/postgres','https://docs.docker.com/desktop/features/vmm/']:
+        paragraph=p(source);paragraph.paragraph_format.keep_with_next=source!='https://docs.docker.com/desktop/features/vmm/'
     a.output.parent.mkdir(parents=True,exist_ok=True);doc.save(a.output);print(a.output)
 if __name__=='__main__':main()
