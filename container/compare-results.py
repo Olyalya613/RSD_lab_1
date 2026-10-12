@@ -12,6 +12,11 @@ def percentage_change(before,after):
     return 100*(after-before)/before
 
 def conditions(bmeta,dmeta,provenance):
+    dmeta = dict(dmeta)
+    dmeta['source_fingerprints'] = {
+        key.replace('\\', '/'): value
+        for key, value in dmeta.get('source_fingerprints', {}).items()
+    }
     failures=[];notes=[]
     for key in ('cpu','logical_processors','python_version','isolation','workers','db_pool_max','postgres_max_connections'):
         if key not in bmeta or key not in dmeta:notes.append('Не зафіксовано обидва значення '+key)
