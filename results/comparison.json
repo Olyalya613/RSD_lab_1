@@ -1,0 +1,781 @@
+{
+  "rows": [
+    {
+      "test": "smoke",
+      "comparison_status": "ready",
+      "baseline_status": "measured",
+      "docker_status": "measured",
+      "baseline": {
+        "requests": 935,
+        "avg_ms": 2.9820083422459893,
+        "p95_ms": 4.42206,
+        "error_rate": 0.0,
+        "expected_conflicts": 165,
+        "configured_vus": 0,
+        "first_time": null,
+        "last_time": 0.0
+      },
+      "docker": {
+        "requests": 816,
+        "avg_ms": 7.266099264705882,
+        "p95_ms": 16.33895,
+        "error_rate": 0.0,
+        "expected_conflicts": 144,
+        "configured_vus": 0,
+        "first_time": null,
+        "last_time": 0.0
+      },
+      "delta": {
+        "avg_ms_percent": 143.66461896726958,
+        "p95_ms_percent": 269.48729777524505,
+        "errors_percentage_points": 0.0
+      },
+      "problems": [],
+      "docker_environment": {
+        "started_at": "2026-10-12T14:39:04.9207211+03:00",
+        "api_url": "http://localhost:4567",
+        "os": "Майкрософт Windows 10 Pro",
+        "cpu": "Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz",
+        "logical_processors": 8,
+        "ram_gb": 15.86,
+        "k6_version": "k6.exe v2.2.0 (commit/00a9a1b7f5, go1.26.5, windows/amd64)",
+        "postgresql_version": "PostgreSQL 18.4 (Debian 18.4-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+        "isolation": "read committed",
+        "postgres_max_connections": "100",
+        "postgres_encoding": "UTF8",
+        "postgres_collation": "en_US.utf8",
+        "python_version": "3.12.10",
+        "runtime_fingerprints": {
+          "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+          "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+          "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0"
+        },
+        "api_sha256": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+        "dependencies": {
+          "fastapi": "0.142.2",
+          "uvicorn": "0.54.0",
+          "psycopg": "3.3.6",
+          "psycopg-pool": "3.3.3"
+        },
+        "execution": "Docker Desktop Linux containers; host k6",
+        "profile": "benchmark",
+        "docker_version": "29.8.0",
+        "docker_os": "Docker Desktop",
+        "docker_cpus": 8,
+        "docker_ram_gb": 7.69,
+        "workers": 1,
+        "db_pool_max": 20,
+        "source_fingerprints": {
+          "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+          "docs\\schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+          "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0",
+          "tests\\performance-tests\\config\\endpoints.js": "0ed2a5f668e547832aa6dc4b41efac3ac66e7424868bed086ba4c9e313dd1712",
+          "tests\\performance-tests\\config\\profiles.js": "5e74b9d65c1871f56a2fe8534e0685ce9d9160def3c445ccfd9187fc3e1f13dd",
+          "tests\\performance-tests\\endurance-test.js": "169aa8c3742bbf1968f71b360040505ac5dfaeca456d37545bdacb3d6e09f8f8",
+          "tests\\performance-tests\\load-test.js": "98c51d1a8e0c26163cfd290d5b87216ad01189612b6d80545152a5d07b064fb3",
+          "tests\\performance-tests\\smoke-test.js": "7dcd86565a2f90a2ed53d7fd4dea43950842b5ef9805f3c0d2b2c68f9665e465",
+          "tests\\performance-tests\\spike-test.js": "cd273306393f5824ccb166047fffc3088a6d5ef154b2933f2f8225aed1600ed3",
+          "tests\\performance-tests\\stress-test.js": "579f45493282a85155ee4eec2b6c34479b7d56265592dd50a128a10cd2e23208",
+          "tests\\performance-tests\\utils\\api-client.js": "8477a80338fed8dfa6aa971beeaae2cb083990e4e1d0f5cf5fa5554d310213a2",
+          "tests\\performance-tests\\utils\\data-generator.js": "9670c71dc25b8c6b763e8cf5c11fda9a0e25956ef813fc1d0d8c1cdb481625db",
+          "tests\\performance-tests\\utils\\scenario.js": "7b82e8dc09daa89adb969892457de8153ddfbc7c2e86d3b7b2eafe08a7dfbfa6",
+          "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165"
+        },
+        "git_head": "346b1bce314c7cb2237f33cbfa5496347b807e71",
+        "containers": {
+          "web": {
+            "id": "ad3f9f56ae724ae234e741299275c99f3d609d9a2aac3bbb97d632652a3e0b90",
+            "image_id": "sha256:2cd19cf2d98bbbf7e1214b9a999db465c6039e55ebfe246bd8ed77e526f9d3bb",
+            "image_reference": "travelerapi-lab3:local",
+            "user": "1000:1000",
+            "nano_cpus": 0,
+            "memory_bytes": 0,
+            "read_only": true,
+            "command": [
+              "python",
+              "-m",
+              "uvicorn",
+              "app:app",
+              "--host",
+              "0.0.0.0",
+              "--port",
+              "4567",
+              "--workers",
+              "1"
+            ]
+          },
+          "postgres": {
+            "id": "edc648f69a5c17343f00412999edd8bae673abe5e090a7d6b5a08b9d3278e5c6",
+            "image_id": "sha256:882236b897e39051d2368c5ccc6cda944904723506b2dfc97f2a8f5bc9afa382",
+            "image_reference": "postgres:18.4-bookworm",
+            "user": "",
+            "nano_cpus": 0,
+            "memory_bytes": 0,
+            "read_only": false,
+            "command": [
+              "postgres"
+            ]
+          }
+        },
+        "compose_sha256": {
+          "Dockerfile": "ca974c9b98020c88d6d1b07e066e65443e5475860555731a429d190102b5f637",
+          "docker-compose.yml": "0930254f0f807a03b033569aa13e16bb0620c531f99863f6da185b2574bddb82",
+          "docker-compose.benchmark.yml": "867776a9b2e19d618f8b2ed5636e380bccc2fe4da60e3388a276d52ab63423d5"
+        }
+      }
+    },
+    {
+      "test": "load",
+      "comparison_status": "ready",
+      "baseline_status": "measured",
+      "docker_status": "measured",
+      "baseline": {
+        "requests": 98382,
+        "avg_ms": 10.145127006972821,
+        "p95_ms": 30.395165,
+        "error_rate": 0.0,
+        "expected_conflicts": 191,
+        "configured_vus": 0,
+        "first_time": null,
+        "last_time": 0.0
+      },
+      "docker": {
+        "requests": 71177,
+        "avg_ms": 80.13133842252412,
+        "p95_ms": 157.03225999999995,
+        "error_rate": 0.0,
+        "expected_conflicts": 641,
+        "configured_vus": 0,
+        "first_time": null,
+        "last_time": 0.0
+      },
+      "delta": {
+        "avg_ms_percent": 689.8505200324182,
+        "p95_ms_percent": 416.63565570379353,
+        "errors_percentage_points": 0.0
+      },
+      "problems": [],
+      "docker_environment": {
+        "started_at": "2026-10-12T14:40:55.7806939+03:00",
+        "api_url": "http://localhost:4567",
+        "os": "Майкрософт Windows 10 Pro",
+        "cpu": "Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz",
+        "logical_processors": 8,
+        "ram_gb": 15.86,
+        "k6_version": "k6.exe v2.2.0 (commit/00a9a1b7f5, go1.26.5, windows/amd64)",
+        "postgresql_version": "PostgreSQL 18.4 (Debian 18.4-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+        "isolation": "read committed",
+        "postgres_max_connections": "100",
+        "postgres_encoding": "UTF8",
+        "postgres_collation": "en_US.utf8",
+        "python_version": "3.12.10",
+        "runtime_fingerprints": {
+          "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+          "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+          "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0"
+        },
+        "api_sha256": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+        "dependencies": {
+          "fastapi": "0.142.2",
+          "uvicorn": "0.54.0",
+          "psycopg": "3.3.6",
+          "psycopg-pool": "3.3.3"
+        },
+        "execution": "Docker Desktop Linux containers; host k6",
+        "profile": "benchmark",
+        "docker_version": "29.8.0",
+        "docker_os": "Docker Desktop",
+        "docker_cpus": 8,
+        "docker_ram_gb": 7.69,
+        "workers": 1,
+        "db_pool_max": 20,
+        "source_fingerprints": {
+          "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+          "docs\\schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+          "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0",
+          "tests\\performance-tests\\config\\endpoints.js": "0ed2a5f668e547832aa6dc4b41efac3ac66e7424868bed086ba4c9e313dd1712",
+          "tests\\performance-tests\\config\\profiles.js": "5e74b9d65c1871f56a2fe8534e0685ce9d9160def3c445ccfd9187fc3e1f13dd",
+          "tests\\performance-tests\\endurance-test.js": "169aa8c3742bbf1968f71b360040505ac5dfaeca456d37545bdacb3d6e09f8f8",
+          "tests\\performance-tests\\load-test.js": "98c51d1a8e0c26163cfd290d5b87216ad01189612b6d80545152a5d07b064fb3",
+          "tests\\performance-tests\\smoke-test.js": "7dcd86565a2f90a2ed53d7fd4dea43950842b5ef9805f3c0d2b2c68f9665e465",
+          "tests\\performance-tests\\spike-test.js": "cd273306393f5824ccb166047fffc3088a6d5ef154b2933f2f8225aed1600ed3",
+          "tests\\performance-tests\\stress-test.js": "579f45493282a85155ee4eec2b6c34479b7d56265592dd50a128a10cd2e23208",
+          "tests\\performance-tests\\utils\\api-client.js": "8477a80338fed8dfa6aa971beeaae2cb083990e4e1d0f5cf5fa5554d310213a2",
+          "tests\\performance-tests\\utils\\data-generator.js": "9670c71dc25b8c6b763e8cf5c11fda9a0e25956ef813fc1d0d8c1cdb481625db",
+          "tests\\performance-tests\\utils\\scenario.js": "7b82e8dc09daa89adb969892457de8153ddfbc7c2e86d3b7b2eafe08a7dfbfa6",
+          "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165"
+        },
+        "git_head": "346b1bce314c7cb2237f33cbfa5496347b807e71",
+        "containers": {
+          "web": {
+            "id": "ad3f9f56ae724ae234e741299275c99f3d609d9a2aac3bbb97d632652a3e0b90",
+            "image_id": "sha256:2cd19cf2d98bbbf7e1214b9a999db465c6039e55ebfe246bd8ed77e526f9d3bb",
+            "image_reference": "travelerapi-lab3:local",
+            "user": "1000:1000",
+            "nano_cpus": 0,
+            "memory_bytes": 0,
+            "read_only": true,
+            "command": [
+              "python",
+              "-m",
+              "uvicorn",
+              "app:app",
+              "--host",
+              "0.0.0.0",
+              "--port",
+              "4567",
+              "--workers",
+              "1"
+            ]
+          },
+          "postgres": {
+            "id": "edc648f69a5c17343f00412999edd8bae673abe5e090a7d6b5a08b9d3278e5c6",
+            "image_id": "sha256:882236b897e39051d2368c5ccc6cda944904723506b2dfc97f2a8f5bc9afa382",
+            "image_reference": "postgres:18.4-bookworm",
+            "user": "",
+            "nano_cpus": 0,
+            "memory_bytes": 0,
+            "read_only": false,
+            "command": [
+              "postgres"
+            ]
+          }
+        },
+        "compose_sha256": {
+          "Dockerfile": "ca974c9b98020c88d6d1b07e066e65443e5475860555731a429d190102b5f637",
+          "docker-compose.yml": "0930254f0f807a03b033569aa13e16bb0620c531f99863f6da185b2574bddb82",
+          "docker-compose.benchmark.yml": "867776a9b2e19d618f8b2ed5636e380bccc2fe4da60e3388a276d52ab63423d5"
+        }
+      }
+    },
+    {
+      "test": "stress",
+      "comparison_status": "ready",
+      "baseline_status": "measured",
+      "docker_status": "measured",
+      "baseline": {
+        "requests": 208710,
+        "avg_ms": 797.0932769158162,
+        "p95_ms": 2193.5060949999993,
+        "error_rate": 0.0,
+        "expected_conflicts": 7067,
+        "configured_vus": 0,
+        "first_time": null,
+        "last_time": 0.0
+      },
+      "docker": {
+        "requests": 137444,
+        "avg_ms": 1307.8489744375893,
+        "p95_ms": 3164.1114249999996,
+        "error_rate": 0.0,
+        "expected_conflicts": 5120,
+        "configured_vus": 0,
+        "first_time": null,
+        "last_time": 0.0
+      },
+      "delta": {
+        "avg_ms_percent": 64.07728082941989,
+        "p95_ms_percent": 44.24903729296456,
+        "errors_percentage_points": 0.0
+      },
+      "problems": [],
+      "docker_environment": {
+        "started_at": "2026-10-12T14:47:09.1564713+03:00",
+        "api_url": "http://localhost:4567",
+        "os": "Майкрософт Windows 10 Pro",
+        "cpu": "Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz",
+        "logical_processors": 8,
+        "ram_gb": 15.86,
+        "k6_version": "k6.exe v2.2.0 (commit/00a9a1b7f5, go1.26.5, windows/amd64)",
+        "postgresql_version": "PostgreSQL 18.4 (Debian 18.4-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+        "isolation": "read committed",
+        "postgres_max_connections": "100",
+        "postgres_encoding": "UTF8",
+        "postgres_collation": "en_US.utf8",
+        "python_version": "3.12.10",
+        "runtime_fingerprints": {
+          "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+          "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+          "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0"
+        },
+        "api_sha256": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+        "dependencies": {
+          "fastapi": "0.142.2",
+          "uvicorn": "0.54.0",
+          "psycopg": "3.3.6",
+          "psycopg-pool": "3.3.3"
+        },
+        "execution": "Docker Desktop Linux containers; host k6",
+        "profile": "benchmark",
+        "docker_version": "29.8.0",
+        "docker_os": "Docker Desktop",
+        "docker_cpus": 8,
+        "docker_ram_gb": 7.69,
+        "workers": 1,
+        "db_pool_max": 20,
+        "source_fingerprints": {
+          "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+          "docs\\schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+          "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0",
+          "tests\\performance-tests\\config\\endpoints.js": "0ed2a5f668e547832aa6dc4b41efac3ac66e7424868bed086ba4c9e313dd1712",
+          "tests\\performance-tests\\config\\profiles.js": "5e74b9d65c1871f56a2fe8534e0685ce9d9160def3c445ccfd9187fc3e1f13dd",
+          "tests\\performance-tests\\endurance-test.js": "169aa8c3742bbf1968f71b360040505ac5dfaeca456d37545bdacb3d6e09f8f8",
+          "tests\\performance-tests\\load-test.js": "98c51d1a8e0c26163cfd290d5b87216ad01189612b6d80545152a5d07b064fb3",
+          "tests\\performance-tests\\smoke-test.js": "7dcd86565a2f90a2ed53d7fd4dea43950842b5ef9805f3c0d2b2c68f9665e465",
+          "tests\\performance-tests\\spike-test.js": "cd273306393f5824ccb166047fffc3088a6d5ef154b2933f2f8225aed1600ed3",
+          "tests\\performance-tests\\stress-test.js": "579f45493282a85155ee4eec2b6c34479b7d56265592dd50a128a10cd2e23208",
+          "tests\\performance-tests\\utils\\api-client.js": "8477a80338fed8dfa6aa971beeaae2cb083990e4e1d0f5cf5fa5554d310213a2",
+          "tests\\performance-tests\\utils\\data-generator.js": "9670c71dc25b8c6b763e8cf5c11fda9a0e25956ef813fc1d0d8c1cdb481625db",
+          "tests\\performance-tests\\utils\\scenario.js": "7b82e8dc09daa89adb969892457de8153ddfbc7c2e86d3b7b2eafe08a7dfbfa6",
+          "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165"
+        },
+        "git_head": "346b1bce314c7cb2237f33cbfa5496347b807e71",
+        "containers": {
+          "web": {
+            "id": "ad3f9f56ae724ae234e741299275c99f3d609d9a2aac3bbb97d632652a3e0b90",
+            "image_id": "sha256:2cd19cf2d98bbbf7e1214b9a999db465c6039e55ebfe246bd8ed77e526f9d3bb",
+            "image_reference": "travelerapi-lab3:local",
+            "user": "1000:1000",
+            "nano_cpus": 0,
+            "memory_bytes": 0,
+            "read_only": true,
+            "command": [
+              "python",
+              "-m",
+              "uvicorn",
+              "app:app",
+              "--host",
+              "0.0.0.0",
+              "--port",
+              "4567",
+              "--workers",
+              "1"
+            ]
+          },
+          "postgres": {
+            "id": "edc648f69a5c17343f00412999edd8bae673abe5e090a7d6b5a08b9d3278e5c6",
+            "image_id": "sha256:882236b897e39051d2368c5ccc6cda944904723506b2dfc97f2a8f5bc9afa382",
+            "image_reference": "postgres:18.4-bookworm",
+            "user": "",
+            "nano_cpus": 0,
+            "memory_bytes": 0,
+            "read_only": false,
+            "command": [
+              "postgres"
+            ]
+          }
+        },
+        "compose_sha256": {
+          "Dockerfile": "ca974c9b98020c88d6d1b07e066e65443e5475860555731a429d190102b5f637",
+          "docker-compose.yml": "0930254f0f807a03b033569aa13e16bb0620c531f99863f6da185b2574bddb82",
+          "docker-compose.benchmark.yml": "867776a9b2e19d618f8b2ed5636e380bccc2fe4da60e3388a276d52ab63423d5"
+        }
+      }
+    },
+    {
+      "test": "spike",
+      "comparison_status": "ready",
+      "baseline_status": "measured",
+      "docker_status": "measured",
+      "baseline": {
+        "requests": 48051,
+        "avg_ms": 448.9074132609103,
+        "p95_ms": 1837.1145499999998,
+        "error_rate": 0.62050737757799,
+        "expected_conflicts": 525,
+        "configured_vus": 0,
+        "first_time": null,
+        "last_time": 0.0
+      },
+      "docker": {
+        "requests": 15240,
+        "avg_ms": 2253.359556456693,
+        "p95_ms": 4401.593805,
+        "error_rate": 0.0,
+        "expected_conflicts": 562,
+        "configured_vus": 0,
+        "first_time": null,
+        "last_time": 0.0
+      },
+      "delta": {
+        "avg_ms_percent": 401.96532511861506,
+        "p95_ms_percent": 139.59277906758732,
+        "errors_percentage_points": -62.050737757799
+      },
+      "problems": [],
+      "docker_environment": {
+        "started_at": "2026-10-12T14:58:09.7292930+03:00",
+        "api_url": "http://localhost:4567",
+        "os": "Майкрософт Windows 10 Pro",
+        "cpu": "Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz",
+        "logical_processors": 8,
+        "ram_gb": 15.86,
+        "k6_version": "k6.exe v2.2.0 (commit/00a9a1b7f5, go1.26.5, windows/amd64)",
+        "postgresql_version": "PostgreSQL 18.4 (Debian 18.4-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+        "isolation": "read committed",
+        "postgres_max_connections": "100",
+        "postgres_encoding": "UTF8",
+        "postgres_collation": "en_US.utf8",
+        "python_version": "3.12.10",
+        "runtime_fingerprints": {
+          "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+          "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+          "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0"
+        },
+        "api_sha256": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+        "dependencies": {
+          "fastapi": "0.142.2",
+          "uvicorn": "0.54.0",
+          "psycopg": "3.3.6",
+          "psycopg-pool": "3.3.3"
+        },
+        "execution": "Docker Desktop Linux containers; host k6",
+        "profile": "benchmark",
+        "docker_version": "29.8.0",
+        "docker_os": "Docker Desktop",
+        "docker_cpus": 8,
+        "docker_ram_gb": 7.69,
+        "workers": 1,
+        "db_pool_max": 20,
+        "source_fingerprints": {
+          "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+          "docs\\schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+          "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0",
+          "tests\\performance-tests\\config\\endpoints.js": "0ed2a5f668e547832aa6dc4b41efac3ac66e7424868bed086ba4c9e313dd1712",
+          "tests\\performance-tests\\config\\profiles.js": "5e74b9d65c1871f56a2fe8534e0685ce9d9160def3c445ccfd9187fc3e1f13dd",
+          "tests\\performance-tests\\endurance-test.js": "169aa8c3742bbf1968f71b360040505ac5dfaeca456d37545bdacb3d6e09f8f8",
+          "tests\\performance-tests\\load-test.js": "98c51d1a8e0c26163cfd290d5b87216ad01189612b6d80545152a5d07b064fb3",
+          "tests\\performance-tests\\smoke-test.js": "7dcd86565a2f90a2ed53d7fd4dea43950842b5ef9805f3c0d2b2c68f9665e465",
+          "tests\\performance-tests\\spike-test.js": "cd273306393f5824ccb166047fffc3088a6d5ef154b2933f2f8225aed1600ed3",
+          "tests\\performance-tests\\stress-test.js": "579f45493282a85155ee4eec2b6c34479b7d56265592dd50a128a10cd2e23208",
+          "tests\\performance-tests\\utils\\api-client.js": "8477a80338fed8dfa6aa971beeaae2cb083990e4e1d0f5cf5fa5554d310213a2",
+          "tests\\performance-tests\\utils\\data-generator.js": "9670c71dc25b8c6b763e8cf5c11fda9a0e25956ef813fc1d0d8c1cdb481625db",
+          "tests\\performance-tests\\utils\\scenario.js": "7b82e8dc09daa89adb969892457de8153ddfbc7c2e86d3b7b2eafe08a7dfbfa6",
+          "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165"
+        },
+        "git_head": "346b1bce314c7cb2237f33cbfa5496347b807e71",
+        "containers": {
+          "web": {
+            "id": "ad3f9f56ae724ae234e741299275c99f3d609d9a2aac3bbb97d632652a3e0b90",
+            "image_id": "sha256:2cd19cf2d98bbbf7e1214b9a999db465c6039e55ebfe246bd8ed77e526f9d3bb",
+            "image_reference": "travelerapi-lab3:local",
+            "user": "1000:1000",
+            "nano_cpus": 0,
+            "memory_bytes": 0,
+            "read_only": true,
+            "command": [
+              "python",
+              "-m",
+              "uvicorn",
+              "app:app",
+              "--host",
+              "0.0.0.0",
+              "--port",
+              "4567",
+              "--workers",
+              "1"
+            ]
+          },
+          "postgres": {
+            "id": "edc648f69a5c17343f00412999edd8bae673abe5e090a7d6b5a08b9d3278e5c6",
+            "image_id": "sha256:882236b897e39051d2368c5ccc6cda944904723506b2dfc97f2a8f5bc9afa382",
+            "image_reference": "postgres:18.4-bookworm",
+            "user": "",
+            "nano_cpus": 0,
+            "memory_bytes": 0,
+            "read_only": false,
+            "command": [
+              "postgres"
+            ]
+          }
+        },
+        "compose_sha256": {
+          "Dockerfile": "ca974c9b98020c88d6d1b07e066e65443e5475860555731a429d190102b5f637",
+          "docker-compose.yml": "0930254f0f807a03b033569aa13e16bb0620c531f99863f6da185b2574bddb82",
+          "docker-compose.benchmark.yml": "867776a9b2e19d618f8b2ed5636e380bccc2fe4da60e3388a276d52ab63423d5"
+        }
+      }
+    },
+    {
+      "test": "endurance",
+      "comparison_status": "ready",
+      "baseline_status": "measured",
+      "docker_status": "measured",
+      "baseline": {
+        "requests": 917071,
+        "avg_ms": 16.69801616777763,
+        "p95_ms": 42.780699999999996,
+        "error_rate": 0.0,
+        "expected_conflicts": 3096,
+        "configured_vus": 0,
+        "first_time": null,
+        "last_time": 0.0
+      },
+      "docker": {
+        "requests": 550190,
+        "avg_ms": 142.9045737401625,
+        "p95_ms": 214.760755,
+        "error_rate": 0.0,
+        "expected_conflicts": 7464,
+        "configured_vus": 0,
+        "first_time": null,
+        "last_time": 0.0
+      },
+      "delta": {
+        "avg_ms_percent": 755.8176750117611,
+        "p95_ms_percent": 402.0038358418633,
+        "errors_percentage_points": 0.0
+      },
+      "problems": [],
+      "docker_environment": {
+        "started_at": "2026-10-12T15:02:25.1504205+03:00",
+        "api_url": "http://localhost:4567",
+        "os": "Майкрософт Windows 10 Pro",
+        "cpu": "Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz",
+        "logical_processors": 8,
+        "ram_gb": 15.86,
+        "k6_version": "k6.exe v2.2.0 (commit/00a9a1b7f5, go1.26.5, windows/amd64)",
+        "postgresql_version": "PostgreSQL 18.4 (Debian 18.4-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+        "isolation": "read committed",
+        "postgres_max_connections": "100",
+        "postgres_encoding": "UTF8",
+        "postgres_collation": "en_US.utf8",
+        "python_version": "3.12.10",
+        "runtime_fingerprints": {
+          "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+          "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+          "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0"
+        },
+        "api_sha256": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+        "dependencies": {
+          "fastapi": "0.142.2",
+          "uvicorn": "0.54.0",
+          "psycopg": "3.3.6",
+          "psycopg-pool": "3.3.3"
+        },
+        "execution": "Docker Desktop Linux containers; host k6",
+        "profile": "benchmark",
+        "docker_version": "29.8.0",
+        "docker_os": "Docker Desktop",
+        "docker_cpus": 8,
+        "docker_ram_gb": 7.69,
+        "workers": 1,
+        "db_pool_max": 20,
+        "source_fingerprints": {
+          "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+          "docs\\schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+          "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0",
+          "tests\\performance-tests\\config\\endpoints.js": "0ed2a5f668e547832aa6dc4b41efac3ac66e7424868bed086ba4c9e313dd1712",
+          "tests\\performance-tests\\config\\profiles.js": "5e74b9d65c1871f56a2fe8534e0685ce9d9160def3c445ccfd9187fc3e1f13dd",
+          "tests\\performance-tests\\endurance-test.js": "169aa8c3742bbf1968f71b360040505ac5dfaeca456d37545bdacb3d6e09f8f8",
+          "tests\\performance-tests\\load-test.js": "98c51d1a8e0c26163cfd290d5b87216ad01189612b6d80545152a5d07b064fb3",
+          "tests\\performance-tests\\smoke-test.js": "7dcd86565a2f90a2ed53d7fd4dea43950842b5ef9805f3c0d2b2c68f9665e465",
+          "tests\\performance-tests\\spike-test.js": "cd273306393f5824ccb166047fffc3088a6d5ef154b2933f2f8225aed1600ed3",
+          "tests\\performance-tests\\stress-test.js": "579f45493282a85155ee4eec2b6c34479b7d56265592dd50a128a10cd2e23208",
+          "tests\\performance-tests\\utils\\api-client.js": "8477a80338fed8dfa6aa971beeaae2cb083990e4e1d0f5cf5fa5554d310213a2",
+          "tests\\performance-tests\\utils\\data-generator.js": "9670c71dc25b8c6b763e8cf5c11fda9a0e25956ef813fc1d0d8c1cdb481625db",
+          "tests\\performance-tests\\utils\\scenario.js": "7b82e8dc09daa89adb969892457de8153ddfbc7c2e86d3b7b2eafe08a7dfbfa6",
+          "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165"
+        },
+        "git_head": "346b1bce314c7cb2237f33cbfa5496347b807e71",
+        "containers": {
+          "web": {
+            "id": "ad3f9f56ae724ae234e741299275c99f3d609d9a2aac3bbb97d632652a3e0b90",
+            "image_id": "sha256:2cd19cf2d98bbbf7e1214b9a999db465c6039e55ebfe246bd8ed77e526f9d3bb",
+            "image_reference": "travelerapi-lab3:local",
+            "user": "1000:1000",
+            "nano_cpus": 0,
+            "memory_bytes": 0,
+            "read_only": true,
+            "command": [
+              "python",
+              "-m",
+              "uvicorn",
+              "app:app",
+              "--host",
+              "0.0.0.0",
+              "--port",
+              "4567",
+              "--workers",
+              "1"
+            ]
+          },
+          "postgres": {
+            "id": "edc648f69a5c17343f00412999edd8bae673abe5e090a7d6b5a08b9d3278e5c6",
+            "image_id": "sha256:882236b897e39051d2368c5ccc6cda944904723506b2dfc97f2a8f5bc9afa382",
+            "image_reference": "postgres:18.4-bookworm",
+            "user": "",
+            "nano_cpus": 0,
+            "memory_bytes": 0,
+            "read_only": false,
+            "command": [
+              "postgres"
+            ]
+          }
+        },
+        "compose_sha256": {
+          "Dockerfile": "ca974c9b98020c88d6d1b07e066e65443e5475860555731a429d190102b5f637",
+          "docker-compose.yml": "0930254f0f807a03b033569aa13e16bb0620c531f99863f6da185b2574bddb82",
+          "docker-compose.benchmark.yml": "867776a9b2e19d618f8b2ed5636e380bccc2fe4da60e3388a276d52ab63423d5"
+        }
+      }
+    }
+  ],
+  "environment_problems": [],
+  "method_notes": [
+    "Windows native порівнюється з Linux у Docker Desktop; результат включає ОС, мережу, сховище та VM-wide обмеження."
+  ],
+  "baseline_meta": {
+    "started_at": "2026-10-05T15:26:56.7003803+03:00",
+    "api_url": "http://localhost:4567",
+    "execution": "native Windows processes, confirm PostgreSQL/API are not containers",
+    "os": "Майкрософт Windows 10 Pro",
+    "cpu": "Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz",
+    "logical_processors": 8,
+    "ram_gb": 15.86,
+    "k6_version": "k6.exe v2.2.0 (commit/00a9a1b7f5, go1.26.5, windows/amd64)",
+    "workers": 1,
+    "db_pool_max": 20,
+    "git_head": "97a1f57894c9d2bb8e6a75e2e0be2abd941d6a21",
+    "postgresql_version": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35226, 64-bit",
+    "isolation": "read committed",
+    "postgres_max_connections": "100",
+    "python_version": "3.12.10",
+    "dependencies": {
+      "fastapi": "0.142.2",
+      "uvicorn": "0.54.0",
+      "psycopg": "3.3.6",
+      "psycopg-pool": "3.3.3"
+    }
+  },
+  "docker_meta": {
+    "started_at": "2026-10-12T15:02:25.1504205+03:00",
+    "api_url": "http://localhost:4567",
+    "os": "Майкрософт Windows 10 Pro",
+    "cpu": "Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz",
+    "logical_processors": 8,
+    "ram_gb": 15.86,
+    "k6_version": "k6.exe v2.2.0 (commit/00a9a1b7f5, go1.26.5, windows/amd64)",
+    "postgresql_version": "PostgreSQL 18.4 (Debian 18.4-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+    "isolation": "read committed",
+    "postgres_max_connections": "100",
+    "postgres_encoding": "UTF8",
+    "postgres_collation": "en_US.utf8",
+    "python_version": "3.12.10",
+    "runtime_fingerprints": {
+      "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+      "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+      "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0"
+    },
+    "api_sha256": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+    "dependencies": {
+      "fastapi": "0.142.2",
+      "uvicorn": "0.54.0",
+      "psycopg": "3.3.6",
+      "psycopg-pool": "3.3.3"
+    },
+    "execution": "Docker Desktop Linux containers; host k6",
+    "profile": "benchmark",
+    "docker_version": "29.8.0",
+    "docker_os": "Docker Desktop",
+    "docker_cpus": 8,
+    "docker_ram_gb": 7.69,
+    "workers": 1,
+    "db_pool_max": 20,
+    "source_fingerprints": {
+      "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+      "docs\\schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+      "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0",
+      "tests\\performance-tests\\config\\endpoints.js": "0ed2a5f668e547832aa6dc4b41efac3ac66e7424868bed086ba4c9e313dd1712",
+      "tests\\performance-tests\\config\\profiles.js": "5e74b9d65c1871f56a2fe8534e0685ce9d9160def3c445ccfd9187fc3e1f13dd",
+      "tests\\performance-tests\\endurance-test.js": "169aa8c3742bbf1968f71b360040505ac5dfaeca456d37545bdacb3d6e09f8f8",
+      "tests\\performance-tests\\load-test.js": "98c51d1a8e0c26163cfd290d5b87216ad01189612b6d80545152a5d07b064fb3",
+      "tests\\performance-tests\\smoke-test.js": "7dcd86565a2f90a2ed53d7fd4dea43950842b5ef9805f3c0d2b2c68f9665e465",
+      "tests\\performance-tests\\spike-test.js": "cd273306393f5824ccb166047fffc3088a6d5ef154b2933f2f8225aed1600ed3",
+      "tests\\performance-tests\\stress-test.js": "579f45493282a85155ee4eec2b6c34479b7d56265592dd50a128a10cd2e23208",
+      "tests\\performance-tests\\utils\\api-client.js": "8477a80338fed8dfa6aa971beeaae2cb083990e4e1d0f5cf5fa5554d310213a2",
+      "tests\\performance-tests\\utils\\data-generator.js": "9670c71dc25b8c6b763e8cf5c11fda9a0e25956ef813fc1d0d8c1cdb481625db",
+      "tests\\performance-tests\\utils\\scenario.js": "7b82e8dc09daa89adb969892457de8153ddfbc7c2e86d3b7b2eafe08a7dfbfa6",
+      "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165"
+    },
+    "git_head": "346b1bce314c7cb2237f33cbfa5496347b807e71",
+    "containers": {
+      "web": {
+        "id": "ad3f9f56ae724ae234e741299275c99f3d609d9a2aac3bbb97d632652a3e0b90",
+        "image_id": "sha256:2cd19cf2d98bbbf7e1214b9a999db465c6039e55ebfe246bd8ed77e526f9d3bb",
+        "image_reference": "travelerapi-lab3:local",
+        "user": "1000:1000",
+        "nano_cpus": 0,
+        "memory_bytes": 0,
+        "read_only": true,
+        "command": [
+          "python",
+          "-m",
+          "uvicorn",
+          "app:app",
+          "--host",
+          "0.0.0.0",
+          "--port",
+          "4567",
+          "--workers",
+          "1"
+        ]
+      },
+      "postgres": {
+        "id": "edc648f69a5c17343f00412999edd8bae673abe5e090a7d6b5a08b9d3278e5c6",
+        "image_id": "sha256:882236b897e39051d2368c5ccc6cda944904723506b2dfc97f2a8f5bc9afa382",
+        "image_reference": "postgres:18.4-bookworm",
+        "user": "",
+        "nano_cpus": 0,
+        "memory_bytes": 0,
+        "read_only": false,
+        "command": [
+          "postgres"
+        ]
+      }
+    },
+    "compose_sha256": {
+      "Dockerfile": "ca974c9b98020c88d6d1b07e066e65443e5475860555731a429d190102b5f637",
+      "docker-compose.yml": "0930254f0f807a03b033569aa13e16bb0620c531f99863f6da185b2574bddb82",
+      "docker-compose.benchmark.yml": "867776a9b2e19d618f8b2ed5636e380bccc2fe4da60e3388a276d52ab63423d5"
+    }
+  },
+  "baseline_source": {
+    "source_repository": "https://github.com/Olyalya613/RSD_lab_1",
+    "source_branch": "lab2-corrected",
+    "source_commit": "4fa48edf2e5dfdcf78325acde264215e86164117",
+    "api_sha256": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+    "files": {
+      "analysis.json": "f2b92ee74cc5f6535a578731894e9bbcf8b31f47ef5a78a99a4beed429a9c718",
+      "endurance-screenshot.png": "b2451eed922787781fdc220288f8bf0776853c524806c5b80d14ceaa313576a2",
+      "endurance-summary.json": "48574887081de313d809a721423c26ec013a2b8c36738d9a74237a9ebe827066",
+      "load-screenshot.png": "dc05b3c4d954b196425d753b4826c6e0ba65934d4eda70b5b820cc5914d1ed62",
+      "load-summary.json": "5e0dc02bdd894e6a006081c88a5e9f9da18df4bd425b1470406c81d82b698949",
+      "run-meta.json": "c9b444bf199124dd5181efefc012cccfd98cff7c14e14fcc0ecf555a5bfb1764",
+      "smoke-screenshot.png": "62f945c9fd467da7e578c35751db3f7b2585a40a7478990ef0aecd92b2b8eb82",
+      "smoke-summary.json": "aa99d5faa5ea74248b6eed81fe4ebe5df325ea51785ee850d196dedf94319e1e",
+      "spike-screenshot.png": "3bb11fae0389e177a014dcf97cce674be3e63e69d10ce709c1ff5ea0fba9799b",
+      "spike-summary.json": "77b8f12172fc9fa73af4e4d23af63dfe8cbd10d98318f16cb9d5f3392bb08bf0",
+      "stress-screenshot.png": "a63db462813da969bbbfc49ca53393a6193e217b24874e57ec6d890172778b1f",
+      "stress-summary.json": "70aed185eb9889964f5494f5be4ada9019cf95aa838f1f1cd8ff4a7a22ac3254"
+    },
+    "scenario_sha256": {
+      "tests/performance-tests/config/endpoints.js": "0ed2a5f668e547832aa6dc4b41efac3ac66e7424868bed086ba4c9e313dd1712",
+      "tests/performance-tests/config/profiles.js": "5e74b9d65c1871f56a2fe8534e0685ce9d9160def3c445ccfd9187fc3e1f13dd",
+      "tests/performance-tests/endurance-test.js": "169aa8c3742bbf1968f71b360040505ac5dfaeca456d37545bdacb3d6e09f8f8",
+      "tests/performance-tests/load-test.js": "98c51d1a8e0c26163cfd290d5b87216ad01189612b6d80545152a5d07b064fb3",
+      "tests/performance-tests/smoke-test.js": "7dcd86565a2f90a2ed53d7fd4dea43950842b5ef9805f3c0d2b2c68f9665e465",
+      "tests/performance-tests/spike-test.js": "cd273306393f5824ccb166047fffc3088a6d5ef154b2933f2f8225aed1600ed3",
+      "tests/performance-tests/stress-test.js": "579f45493282a85155ee4eec2b6c34479b7d56265592dd50a128a10cd2e23208",
+      "tests/performance-tests/utils/api-client.js": "8477a80338fed8dfa6aa971beeaae2cb083990e4e1d0f5cf5fa5554d310213a2",
+      "tests/performance-tests/utils/data-generator.js": "9670c71dc25b8c6b763e8cf5c11fda9a0e25956ef813fc1d0d8c1cdb481625db",
+      "tests/performance-tests/utils/scenario.js": "7b82e8dc09daa89adb969892457de8153ddfbc7c2e86d3b7b2eafe08a7dfbfa6"
+    },
+    "runtime_fingerprints": {
+      "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+      "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+      "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0"
+    },
+    "limitations": "Native metadata did not record per-test source hashes or database locale; hashes here identify the published Lab 2 code."
+  }
+}
