@@ -123,7 +123,7 @@ def main():
     inserted=False
     for name in NAMES:
         before=bdata.get(name,{});after=ddata.get(name,{})
-        if before.get('timeline') or after.get('timeline'):
+        if len(before.get('timeline',[]))>1 or len(after.get('timeline',[]))>1:
             import matplotlib
             matplotlib.use('Agg')
             import matplotlib.pyplot as plt
@@ -134,7 +134,7 @@ def main():
                 origin=timeline[0]['time'];x=[(point['time']-origin)/60 for point in timeline]
                 axes[0].plot(x,[point['p95_ms'] for point in timeline],label=label)
                 axes[1].plot(x,[100*(point['error_rate'] or 0) for point in timeline],label=label)
-            axes[0].set_ylabel('p95 (ms)');axes[1].set_ylabel('Errors (%)');axes[1].set_xlabel('Minutes');axes[0].legend();axes[0].grid(alpha=.25);axes[1].grid(alpha=.25);fig.suptitle(name.capitalize());fig.tight_layout()
+            axes[0].set_ylabel('p95 (ms)');axes[0].set_ylim(bottom=0);axes[1].set_ylabel('Errors (%)');axes[1].set_ylim(bottom=0);axes[1].set_xlabel('Minutes');axes[0].legend();axes[0].grid(alpha=.25);axes[1].grid(alpha=.25);fig.suptitle(name.capitalize());fig.tight_layout()
             image=ROOT/'results'/f'comparison-{name}.png';fig.savefig(image,dpi=150);plt.close(fig)
             caption=p('Графік '+name+' з фактичного 30-секундного ряду метрик. Якщо Docker-серії немає, показано тільки нативний baseline.');caption.paragraph_format.keep_with_next=True
             doc.add_picture(str(image),width=Cm(16));inserted=True
