@@ -1,0 +1,33 @@
+test_configured_vus_are_not_claimed_as_achieved (test_analysis.AnalysisTests.test_configured_vus_are_not_claimed_as_achieved) ... ok
+test_largest_level_requires_good_latency_and_error_rate (test_analysis.AnalysisTests.test_largest_level_requires_good_latency_and_error_rate) ... ok
+test_percentile_linear_interpolation (test_analysis.AnalysisTests.test_percentile_linear_interpolation) ... ok
+test_verification_mode_never_becomes_baseline (test_analysis.AnalysisTests.test_verification_mode_never_becomes_baseline) ... ok
+test_bad_reorder_rolls_back_both_versions (test_concurrency.ConcurrencyTests.test_bad_reorder_rolls_back_both_versions) ... skipped 'Set TEST_DATABASE_URL to run real PostgreSQL concurrency checks'
+test_blocked_location_does_not_block_other_requests (test_concurrency.ConcurrencyTests.test_blocked_location_does_not_block_other_requests) ... skipped 'Set TEST_DATABASE_URL to run real PostgreSQL concurrency checks'
+test_delete_compacts_order_and_changes_versions (test_concurrency.ConcurrencyTests.test_delete_compacts_order_and_changes_versions) ... skipped 'Set TEST_DATABASE_URL to run real PostgreSQL concurrency checks'
+test_disjoint_reorders_share_collection_token (test_concurrency.ConcurrencyTests.test_disjoint_reorders_share_collection_token) ... skipped 'Set TEST_DATABASE_URL to run real PostgreSQL concurrency checks'
+test_location_cas_has_one_winner (test_concurrency.ConcurrencyTests.test_location_cas_has_one_winner) ... skipped 'Set TEST_DATABASE_URL to run real PostgreSQL concurrency checks'
+test_notes_does_not_lock_parent (test_concurrency.ConcurrencyTests.test_notes_does_not_lock_parent) ... skipped 'Set TEST_DATABASE_URL to run real PostgreSQL concurrency checks'
+test_plan_cas_has_one_winner (test_concurrency.ConcurrencyTests.test_plan_cas_has_one_winner) ... skipped 'Set TEST_DATABASE_URL to run real PostgreSQL concurrency checks'
+test_reorder_requires_collection_version (test_concurrency.ConcurrencyTests.test_reorder_requires_collection_version) ... skipped 'Set TEST_DATABASE_URL to run real PostgreSQL concurrency checks'
+test_single_snapshot_while_writer_commits (test_concurrency.ConcurrencyTests.test_single_snapshot_while_writer_commits) ... skipped 'Set TEST_DATABASE_URL to run real PostgreSQL concurrency checks'
+test_stale_collection_after_append_is_rejected (test_concurrency.ConcurrencyTests.test_stale_collection_after_append_is_rejected) ... skipped 'Set TEST_DATABASE_URL to run real PostgreSQL concurrency checks'
+test_stale_location_rolls_back_collection_cas (test_concurrency.ConcurrencyTests.test_stale_location_rolls_back_collection_cas) ... skipped 'Set TEST_DATABASE_URL to run real PostgreSQL concurrency checks'
+test_changed_api_blocks_comparison (test_lab3_comparison.ComparisonTests.test_changed_api_blocks_comparison) ... ok
+test_changed_postgresql_version_is_detected (test_lab3_comparison.ComparisonTests.test_changed_postgresql_version_is_detected) ... ok
+test_different_profile_blocks_comparison (test_lab3_comparison.ComparisonTests.test_different_profile_blocks_comparison) ... ok
+test_error_change_uses_percentage_points (test_lab3_comparison.ComparisonTests.test_error_change_uses_percentage_points) ... ok
+test_no_docker_no_fabricated_delta (test_lab3_comparison.ComparisonTests.test_no_docker_no_fabricated_delta) ... ok
+test_valid_latency_delta (test_lab3_comparison.ComparisonTests.test_valid_latency_delta) ... ok
+test_verification_is_not_a_baseline (test_lab3_comparison.ComparisonTests.test_verification_is_not_a_baseline) ... ok
+test_zero_baseline_has_no_infinite_percentage (test_lab3_comparison.ComparisonTests.test_zero_baseline_has_no_infinite_percentage) ... ok
+test_budget_precision_is_rejected (test_native_validation.ValidationTests.test_budget_precision_is_rejected) ... ok
+test_existing_location_requires_version (test_native_validation.ValidationTests.test_existing_location_requires_version) ... ok
+test_invalid_currency_is_rejected (test_native_validation.ValidationTests.test_invalid_currency_is_rejected) ... ok
+test_nonexistent_location_is_404_even_without_version (test_native_validation.ValidationTests.test_nonexistent_location_is_404_even_without_version) ... ok
+test_unknown_field_is_rejected (test_native_validation.ValidationTests.test_unknown_field_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.007s
+
+OK (skipped=11)

@@ -1,0 +1,38 @@
+{
+  "source_repository": "https://github.com/Olyalya613/RSD_lab_1",
+  "source_branch": "lab2-corrected",
+  "source_commit": "4fa48edf2e5dfdcf78325acde264215e86164117",
+  "api_sha256": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+  "files": {
+    "analysis.json": "f2b92ee74cc5f6535a578731894e9bbcf8b31f47ef5a78a99a4beed429a9c718",
+    "endurance-screenshot.png": "b2451eed922787781fdc220288f8bf0776853c524806c5b80d14ceaa313576a2",
+    "endurance-summary.json": "48574887081de313d809a721423c26ec013a2b8c36738d9a74237a9ebe827066",
+    "load-screenshot.png": "dc05b3c4d954b196425d753b4826c6e0ba65934d4eda70b5b820cc5914d1ed62",
+    "load-summary.json": "5e0dc02bdd894e6a006081c88a5e9f9da18df4bd425b1470406c81d82b698949",
+    "run-meta.json": "c9b444bf199124dd5181efefc012cccfd98cff7c14e14fcc0ecf555a5bfb1764",
+    "smoke-screenshot.png": "62f945c9fd467da7e578c35751db3f7b2585a40a7478990ef0aecd92b2b8eb82",
+    "smoke-summary.json": "aa99d5faa5ea74248b6eed81fe4ebe5df325ea51785ee850d196dedf94319e1e",
+    "spike-screenshot.png": "3bb11fae0389e177a014dcf97cce674be3e63e69d10ce709c1ff5ea0fba9799b",
+    "spike-summary.json": "77b8f12172fc9fa73af4e4d23af63dfe8cbd10d98318f16cb9d5f3392bb08bf0",
+    "stress-screenshot.png": "a63db462813da969bbbfc49ca53393a6193e217b24874e57ec6d890172778b1f",
+    "stress-summary.json": "70aed185eb9889964f5494f5be4ada9019cf95aa838f1f1cd8ff4a7a22ac3254"
+  },
+  "scenario_sha256": {
+    "tests/performance-tests/config/endpoints.js": "0ed2a5f668e547832aa6dc4b41efac3ac66e7424868bed086ba4c9e313dd1712",
+    "tests/performance-tests/config/profiles.js": "5e74b9d65c1871f56a2fe8534e0685ce9d9160def3c445ccfd9187fc3e1f13dd",
+    "tests/performance-tests/endurance-test.js": "169aa8c3742bbf1968f71b360040505ac5dfaeca456d37545bdacb3d6e09f8f8",
+    "tests/performance-tests/load-test.js": "98c51d1a8e0c26163cfd290d5b87216ad01189612b6d80545152a5d07b064fb3",
+    "tests/performance-tests/smoke-test.js": "7dcd86565a2f90a2ed53d7fd4dea43950842b5ef9805f3c0d2b2c68f9665e465",
+    "tests/performance-tests/spike-test.js": "cd273306393f5824ccb166047fffc3088a6d5ef154b2933f2f8225aed1600ed3",
+    "tests/performance-tests/stress-test.js": "579f45493282a85155ee4eec2b6c34479b7d56265592dd50a128a10cd2e23208",
+    "tests/performance-tests/utils/api-client.js": "8477a80338fed8dfa6aa971beeaae2cb083990e4e1d0f5cf5fa5554d310213a2",
+    "tests/performance-tests/utils/data-generator.js": "9670c71dc25b8c6b763e8cf5c11fda9a0e25956ef813fc1d0d8c1cdb481625db",
+    "tests/performance-tests/utils/scenario.js": "7b82e8dc09daa89adb969892457de8153ddfbc7c2e86d3b7b2eafe08a7dfbfa6"
+  },
+  "runtime_fingerprints": {
+    "app.py": "aa948020a5a0c10c8da474b0882e8edb134a73524449152be0ca4cf21c96bc62",
+    "docs/schema.sql": "9c39c73a23dbe5e0e63dbaeccdf10ad6713069f687b77eee098b50d0a3363165",
+    "requirements.lock.txt": "4632a46fc4cc9449bd25675a9c98eb6e65d1c0831028a35b3042ae6f882e07f0"
+  },
+  "limitations": "Native metadata did not record per-test source hashes or database locale; hashes here identify the published Lab 2 code."
+}
